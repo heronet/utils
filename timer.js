@@ -2,6 +2,8 @@
 
 // Curly braces for browser compatibility
 {
+    console.clear();
+    
     // Initial time values
     let secs = 0;
     let mins = 0;
@@ -61,7 +63,7 @@
     // Printing method
     let currentMode = null;
 
-    // Check if ran with Node.js. In which case there won't be a window value
+    // Check if ran with Node.js. In which case window would be undefined
     if(typeof window === 'undefined') {
         // Check additional argument and use multiline printing if -m was provided
         currentMode = (process.argv[2] === '-m') ? printModes.multiLine : printModes.singleLine;
